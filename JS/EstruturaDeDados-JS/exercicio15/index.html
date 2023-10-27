@@ -1,0 +1,80 @@
+<!--Escreva  um  algoritmo  que  calcule  a  quantidade  de  latas  de  tinta  necessárias  e  o  custo  para  pintar  tanques 
+cilíndricos de combustível, onde são fornecidos a altura (h) e o raio (r) desse cilindro. Sabe-se que a lata de 
+tinta anticorrosiva custa R$ 40.00, cada lata contem 5 litros e cada litro pinta 3 metros quadrados na média. 
+Para que fique bem coberto de tinta, há necessidade de 2 demãos. 
+Portanto: 
+    1) A lata de tinta custa 40,00; 
+    2) Cada lata contém 5 litros; 
+    3) A cada litro de tinta pinta 3 metros quadrados. Dados de entrada: altura (H) e raio (R). 
+    Dados de saída: custo (C) e quantidade (QTDE). 
+    Utilizando o planejamento reverso, sabemos que: 
+        • Custo é dado por quantidade de latas * 40,00; 
+        • Quantidade de latas é dada por quantidade total de litros/5; 
+        • A quantidade total de litros é dada por área do cilindro/3 * 2; 
+        • Área do cilindro é dada por área da base + área lateral; 
+        • Área da base é (P1 * EXP(R,2)); 
+        • A área lateral é altura * comprimento: (2 * P1 * R * H); 
+        • Sendo que R (raio) e H (altura) são dados de entrada e P1 é urna constante de valor conhecido: 3,14.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>
+        exercicio 15
+    </h1>
+    
+    <h3>
+        altura:
+    </h3>
+        <input src="text" id="altura">
+    <h3>
+        Raio:
+    </h3>
+        <input src="text" id="raio">
+
+
+    <h3>
+        <button onclick="calcular()"> calcular</button>
+    </h3>
+
+    <h3>
+        área lateral:
+    </h3>
+        <h3 id="arealateral"></h3>
+
+    <h3>
+        Área da base:
+    </h3>
+        <h3 id="areabase"></h3>
+
+    <h3>
+        Área do cilindro:
+    </h3>
+        <h3 id="areacilindro"></h3>
+        
+    <h3>
+        quantidade total de litros:
+    </h3>
+        <h3 id="quantidadelitros"></h3>
+
+    <h3>
+        Quantidade de latas:
+    </h3>
+        <h3 id="qlatas"></h3>
+
+    <h3>
+        Custo:
+    </h3>
+        <h3 id="custo"></h3>
+    
+</body>
+</html>

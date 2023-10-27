@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script>
+        var numero1= prompt('insira o primeiro numero')
+
+        var sinal= prompt('insira o sinal')
+        while(sinal !='+' && sinal != '-' && sinal !='*' && sinal !='/'){
+            alert('insira um sinal valido(+, -, *, /)')
+
+            sinal=prompt('reinsira um sinal valido')
+        }
+         
+        var numero2= prompt('insira o segundo valor')
+
+        numero1= parseInt(numero1)
+        numero2= parseInt(numero2)
+
+        var resultadoFinal = 0
+
+        if(sinal =="+"){
+            resultadoFinal=numero1 + numero2
+        }else if(sinal =="-"){
+            resultadoFinal=numero1 - numero2
+        }else if(sinal =="*"){
+            resultadoFinal=numero1 * numero2
+        }else if(sinal =="/"){
+            resultadoFinal=numero1 / numero2
+        }
+
+        alert('O resultado é '+ resultadoFinal)
+
+    </script>
+    
+</body>
+</html>
+    
+</body>
+</html>
